@@ -12,7 +12,7 @@ import time
 start_time = time.time()
 
 # Reference paths for Resin list
-resin_file_path = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Resin\Resin + Demand\5. Resin - Demand (May 2025)\Resin_May'25.xlsx"
+resin_file_path = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Resin\Resin + Demand\6. Resin - Demand (June 2025)\Resin_June'25.xlsx"
 
 # Years to process
 years = [2023, 2024, 2025, 2026]

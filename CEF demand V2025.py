@@ -12,7 +12,7 @@ import time
 start_time = time.time()
 
 # Reference path for the CEF List file
-cef_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\5. May 25\CEF May 2025.xlsx'
+cef_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\6. June 25\CEF June 2025.xlsx'
 
 # Years to process
 years = [2023, 2024, 2025, 2026]
@@ -60,7 +60,7 @@ for year in years:
     print(f"Successfully processed data for {year}.")
 
 # Save all DataFrames to one Excel file with separate sheets
-output_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\6. June 25\PaintMay2023-2026 W23.xlsx'
+output_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\6. June 25\PaintJune2023-2026 W23.xlsx'
 with pd.ExcelWriter(output_file_path) as writer:
     for year, df in cef_dfs.items():
         df.to_excel(writer, sheet_name=str(year), index=False)
