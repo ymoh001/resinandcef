@@ -12,7 +12,7 @@ import time
 start_time = time.time()
 
 # Reference path for the CEF List file
-cef_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\6. June 25\CEF June 2025.xlsx'
+cef_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\7. July 25\CEF July 2025.xlsx'
 
 # Years to process
 years = [2023, 2024, 2025, 2026]
@@ -26,7 +26,7 @@ for year in years:
     CEF = pd.read_excel(cef_file_path)
     
     # Read the demand data for the current year
-    demand_file_path = f'C:\\Users\\ymohdzaifullizan\\OneDrive - Dyson\\Year 2 rotation - E&O\\Shipment details\\Shipment Details 23 June 25 ({year}).xlsx'
+    demand_file_path = f'C:\\Users\\ymohdzaifullizan\\OneDrive - Dyson\\Year 2 rotation - E&O\\Shipment details\\Shipment Details 14 July 25 ({year}).xlsx'
     demand = pd.read_excel(demand_file_path, sheet_name='preprocess')
 
     # Initialize columns for Total Demand and months in CEF data with zeros
@@ -60,7 +60,7 @@ for year in years:
     print(f"Successfully processed data for {year}.")
 
 # Save all DataFrames to one Excel file with separate sheets
-output_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\6. June 25\PaintJune2023-2026 W26.xlsx'
+output_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\7. July 25\PaintJuly2023-2026 W29.xlsx'
 with pd.ExcelWriter(output_file_path) as writer:
     for year, df in cef_dfs.items():
         df.to_excel(writer, sheet_name=str(year), index=False)
