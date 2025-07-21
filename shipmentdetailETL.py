@@ -9,7 +9,7 @@ import time  # Import the time module
 start_time = time.time()
 
 # Load the Excel file, skipping the first two rows and setting the third row as headers
-file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Shipment details\Shipment Details 14 July 25 (2025).xlsx'
+file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Shipment details\Shipment Details 21 July 25 (2026).xlsx'
 df = pd.read_excel(file_path, header=2)  # Set header to the third row directly
 
 # Step 1: Print the headers to verify
@@ -20,7 +20,7 @@ print(df.columns)
 df.columns = df.columns.astype(str)
 
 # Step 3: Add a 'Total Demand' column summing columns 1 to 12 (representing months) #FOR 2026 include up until relevant months sahaja?
-columns_to_sum = [str(i) for i in range(1, 13)]  # Convert the numbers 1-12 to strings to match months - 2025(1,13) - 2026(1,10)
+columns_to_sum = [str(i) for i in range(1, 10)]  # Convert the numbers 1-12 to strings to match months - 2025(1,13) - 2026(1,10)
 df['Total Demand'] = df[columns_to_sum].sum(axis=1)
 
 # Step 4: Replace values in the 'Vendor' column based on the provided table
@@ -38,7 +38,7 @@ replacement_dict = {
     "FLEXTRONICS INTERNATIONAL ASIA PACI": "Flex",
     "Hi-P (Xiamen) Precision Plastic": "Hi-P Xiamen",
     "FLEXTRONICS SHAH ALAM SDN BHD": "Flex",
-    "Wingtech Group (Hong Kong) Limited": "Wingtech",
+    "Wingtech Group (Hong Kong) Limited": "Luxshare", # Wingtech change to Luxshare
     "BCM Ltd": "BCM",
     "Dyson OPL - Downtons": "OPL",
     "PHICOUSTIC SYSTEMS (HK) LTD": "Phicoustic",
