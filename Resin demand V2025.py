@@ -12,7 +12,7 @@ import time
 start_time = time.time()
 
 # Reference paths for Resin list
-resin_file_path = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Resin\Resin + Demand\7. Resin - Demand (July 2025)\Resin_July'25.xlsx"
+resin_file_path = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Resin\Resin + Demand\8. Resin - Demand (Aug 2025)\Resin_Aug'25.xlsx"
 
 # Years to process
 years = [2023, 2024, 2025, 2026]
@@ -26,7 +26,7 @@ for year in years:
     Resin_Jan = pd.read_excel(resin_file_path)
      
     # Read the demand data for the current year
-    demand_file_path = f'C:\\Users\\ymohdzaifullizan\\OneDrive - Dyson\\Year 2 rotation - E&O\\Shipment details\\Shipment Details 28 July 25 ({year}).xlsx'
+    demand_file_path = f'C:\\Users\\ymohdzaifullizan\\OneDrive - Dyson\\Year 2 rotation - E&O\\Shipment details\\Shipment Details 04 Aug 25 ({year}).xlsx'
     demand = pd.read_excel(demand_file_path, sheet_name='preprocess')
 
     # Initialize columns for Total Demand and months in resin data with zeros
@@ -60,7 +60,7 @@ for year in years:
     print(f"Successfully processed data for {year}.")
 
 # Save all DataFrames to one Excel file with separate sheets
-output_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Resin\Resin + Demand\7. Resin - Demand (July 2025)\ResinJuly2023-2026 W31.xlsx'
+output_file_path = r'C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Resin\Resin + Demand\8. Resin - Demand (Aug 2025)\ResinAug2023-2026 W32.xlsx'
 with pd.ExcelWriter(output_file_path) as writer:
     for year, df in resin_jan_dfs.items():
         df.to_excel(writer, sheet_name=str(year), index=False)
