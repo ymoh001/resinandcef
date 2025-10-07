@@ -115,7 +115,7 @@ def process_folder(input_folder, output_folder):
             modify_sheets(input_file_path, output_file_path)
 
 # --- Run the folder processing function ---
-input_folder = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\8. August 25\11.1 Luxshare CEF needs mods"
-output_folder = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\8. August 25\11.2 Luxshare CEF modified"
+input_folder = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\9. September 25\Sep'25 Consolidated CEF\8. NKG - needs mods"
+output_folder = r"C:\Users\ymohdzaifullizan\OneDrive - Dyson\Year 2 rotation - E&O\Paint\9. September 25\Sep'25 Consolidated CEF\8.2 NKG - modified"
 
 process_folder(input_folder, output_folder)
